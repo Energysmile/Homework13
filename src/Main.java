@@ -7,6 +7,7 @@ public class Main {
         Author author2 = new Author("Мэри", "Шелли");
         Book book1 = new Book("Голодные игры", author1, 2008);
         Book book2 = new Book("Франкенштейн", author2, 1818);
+        Book book3 = new Book("Франкенштейн", author2, 1818);
 
         //изменение года публикации
         book1.setPublicationYear(1999);
@@ -16,5 +17,18 @@ public class Main {
         System.out.println();
         System.out.println("Название книги: " + book2.getTitle() + "\nАвтор книги: " + book2.getAuthor().getFirstName() + " " + book2.getAuthor().getLastName() + "\nГод публикации: " + book2.getPublicationYear());
 
+        //метод toString
+        System.out.println();
+        System.out.println(book1);
+        System.out.println();
+        System.out.println(book2);
+        System.out.println();
+        System.out.println(book3);
+
+        //метод equals
+        System.out.println();
+        System.out.println(book2.equals(book1));
+        System.out.println(book2.equals(book3));
+        System.out.println(book1.equals(book3));
     }
 }
